@@ -16,7 +16,7 @@ export default async function Home() {
   }
 
   const result = await getPosts();
-  const posts = result.success ? result.data : [];
+  const posts = result.success && result.data ? result.data : [];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
